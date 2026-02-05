@@ -1,0 +1,42 @@
+# Pitch do Agente Financeiro
+
+## Roteiro Sugerido
+
+### 1. O Problema (30 seg)
+> Qual dor do cliente você resolve?
+
+Muitas pessoas têm dificuldade em organizar suas finanças pessoais.  
+Elas não conseguem visualizar claramente receitas e despesas, acabam gastando além do limite e não têm alertas que as ajudem a controlar o orçamento.  
+
+### 2. A Solução (1 min)
+> Como seu agente resolve esse problema?
+
+Nosso agente financeiro inteligente organiza automaticamente os dados mockados de receitas e despesas.  
+Ele calcula saldos, gera gráficos simples e emite alertas quando os gastos ultrapassam limites definidos.  
+Tudo isso de forma clara, objetiva e sem recomendações de investimento — apenas foco no controle financeiro pessoal.  
+
+### 3. Demonstração (1 min)
+> Mostre o agente funcionando (pode ser gravação de tela)
+
+Na demonstração, o agente recebe dados de transações fictícias:  
+- Exibe o saldo disponível.  
+- Lista as últimas transações.  
+- Mostra um gráfico de despesas por categoria.  
+- Emite um alerta quando o limite de gastos é ultrapassado.  
+
+### 4. Diferencial e Impacto (30 seg)
+> Por que essa solução é inovadora e qual é o impacto dela na sociedade?
+
+O diferencial está na simplicidade e segurança: o agente não acessa dados reais, apenas simula cenários com base em informações mockadas.  
+Isso permite treinar e validar soluções de IA sem riscos, ajudando pessoas e empresas a entenderem como agentes inteligentes podem apoiar o controle financeiro.  
+O impacto é a democratização da educação financeira, tornando o aprendizado acessível e prático.  
+
+---
+
+## Checklist do Pitch
+
+- [x] Duração máxima de 3 minutos  
+- [x] Problema claramente definido  
+- [x] Solução demonstrada na prática  
+- [x] Diferencial explicado  
+  
