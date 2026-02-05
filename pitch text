@@ -18,6 +18,56 @@ Tudo isso de forma clara, objetiva e sem recomendações de investimento — ape
 ### 3. Demonstração (1 min)
 > Mostre o agente funcionando (pode ser gravação de tela)
 
+import streamlit as st
+import pandas as pd
+
+st.title(" Agente Financeiro")
+
+# Base inicial (pode começar vazia)
+transacoes = []
+
+# Formulário de entrada
+with st.form("nova_transacao"):
+    data = st.date_input("Data da transação")
+    tipo = st.selectbox("Tipo", ["receita", "despesa"])
+    categoria = st.text_input("Categoria")
+    valor = st.number_input("Valor", min_value=0.0, step=10.0)
+
+    # Botão para salvar
+    submitted = st.form_submit_button("Adicionar")
+
+    if submitted:
+        transacoes.append({"data": data, "tipo": tipo, "categoria": categoria, "valor": valor})
+        st.success("Transação adicionada com sucesso!")
+
+# Converter para DataFrame
+if transacoes:
+    df = pd.DataFrame(transacoes)
+    st.subheader(" Transações registradas")
+    st.dataframe(df)
+
+    # Saldo
+    receitas = df[df["tipo"] == "receita"]["valor"].sum()
+    despesas = df[df["tipo"] == "despesa"]["valor"].sum()
+    saldo = receitas - despesas
+
+    st.metric("Saldo atual", f"R$ {saldo}")
+
+    # Alerta
+    limite = 3000
+    if despesas > limite:
+        st.warning(f"Atenção : despesas ultrapassaram o limite de R$ {limite}")
+    else:
+        st.info(" Despesas dentro do limite.")
+
+    # Gráfico
+    st.subheader(" Despesas por categoria")
+    despesas_df = df[df["tipo"] == "despesa"]
+    if not despesas_df.empty:
+        st.bar_chart(despesas_df.set_index("categoria")["valor"])
+
+
+
 Na demonstração, o agente recebe dados de transações fictícias:  
 - Exibe o saldo disponível.  
 - Lista as últimas transações.  
